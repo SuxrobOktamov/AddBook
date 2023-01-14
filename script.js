@@ -3,14 +3,9 @@ let bookName = document.getElementById('bookName');
 let author = document.getElementById('author');
 let type = document.getElementById('type');
 let tbody = document.getElementById('tbody');
-let count = 2;
+let count = 1;
 
-let books = [ {
-    bookName: "Boburnoma",
-    author: 'Bobur',
-    type: "Adabiy",
-    id: 1,
-} ];
+let books = [];
 
 function myFunc(item){
     for( let i = 0; i < item.length; i++ ){
@@ -32,7 +27,7 @@ form.addEventListener('submit', (e) => {
     for(let i = 0; i < books.length; i++ ){
         if( bookName.value == document.querySelectorAll(".join")[i].innerText ){
             alert('Bu kitob kirtilgan!');
-            books.pop(bookName.value == document.querySelectorAll(".join")[i].innerText);
+            books.pop(document.querySelectorAll(".join")[i].innerText);
             count--;
         }
     };
